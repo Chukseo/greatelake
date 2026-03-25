@@ -14,7 +14,15 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;         /* ✅ smaller font size */
   border-radius: 10px;      /* ✅ rounded corners */
+  transition: top 0.3s ease, opacity 0.3s ease;
 }
+
+.navbar.hidden {
+  top: -100px;   /* ✅ slide navbar out of view */
+  opacity: 0;    /* ✅ fade effect */
+}
+
+
 
 .navbar-left {
   flex: 1;
@@ -48,9 +56,19 @@
 }
 
 .nav-link:hover {
-  color: orange;                 /* ✅ highlight color */
-  border-bottom: 2px solid orange; /* ✅ subtle underline effect */
+  color: #FF6E00;                 /* ✅ highlight color */
+  border-bottom: 2px solid #FF6E00; /* ✅ subtle underline effect */
+  text-decoration: none;
 }
+
+.nav-link.active {
+  color: #FF6E00;              /* ✅ dark active color */
+  border-bottom: 2px solid #FF6E00; /* ✅ underline with same color */
+  font-weight: 600;            /* ✅ make it stand out */
+  text-decoration: none;
+  border-bottom: none;
+}
+
 
 .nav-link {
   text-decoration: none;
@@ -60,8 +78,9 @@
 }
 
 .nav-link:hover {
-  color: orange;                 /* ✅ highlight color */
-  border-bottom: 2px solid orange; /* ✅ subtle underline effect */
+  color: #FF6E00;           /* ✅ highlight color */
+  text-decoration: none;   /* ✅ keep underline off */
+  border-bottom: none;     /* ✅ remove bottom border underline */
 }
 .navbar-right {
   flex: 1;

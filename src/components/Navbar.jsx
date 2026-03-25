@@ -1,18 +1,33 @@
 // src/components/Navbar.jsx
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
-import { useState } from "react";
-
-// ✅ Import logo image
+import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const { isAuthenticated, logout } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setHidden(true);   // scrolling down → hide navbar
+      } else {
+        setHidden(false);  // scrolling up → show navbar
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${hidden ? "hidden" : ""}`}>
       {/* Left: Logo + Company Name */}
       <div className="navbar-left">
         <img src={logo} alt="Great Lake CDL Logo" className="navbar-logo" />
@@ -29,21 +44,21 @@ export default function Navbar() {
       {/* Center + Right combined for mobile */}
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <div className="navbar-center">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About Us</Link>
-          <Link to="/contact" className="nav-link">Contact Us</Link>
+          <NavLink to="/" className="nav-link">Home</NavLink>
+          <NavLink to="/about" className="nav-link">About Us</NavLink>
+          <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
         </div>
 
         <div className="navbar-right">
           {isAuthenticated ? (
             <>
-              <Link to="/admin" className="btn-admin">Admin</Link>
+              <NavLink to="/admin" className="btn-admin">Admin</NavLink>
               <button onClick={logout} className="btn-logout">Logout</button>
             </>
           ) : (
-            <Link to="/admin-login" className="btn-admin">Sign in as Admin</Link>
+            <NavLink to="/admin-login" className="btn-admin">Sign in as Admin</NavLink>
           )}
-          <Link to="/application-form" className="btn-apply">Apply Now</Link>
+          <NavLink to="/application-form" className="btn-apply">Apply Now</NavLink>
         </div>
       </div>
     </nav>
