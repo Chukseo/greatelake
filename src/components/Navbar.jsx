@@ -11,15 +11,14 @@ export default function Navbar() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setHidden(true);   // scrolling down → hide navbar
+      if (window.scrollY > 50) {
+        // ✅ Always hide once user scrolls beyond 50px
+        setHidden(true);
       } else {
-        setHidden(false);  // scrolling up → show navbar
+        // ✅ Show only when back at the very top
+        setHidden(false);
       }
-      lastScrollY = window.scrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,20 +27,17 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${hidden ? "hidden" : ""}`}>
-      {/* Left: Logo + Company Name */}
       <div className="navbar-left">
         <img src={logo} alt="Great Lake CDL Logo" className="navbar-logo" />
         <span className="navbar-brand">Great Lake CDL</span>
       </div>
 
-      {/* Hamburger icon (mobile only) */}
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         <span className={menuOpen ? "bar open" : "bar"}></span>
         <span className={menuOpen ? "bar open" : "bar"}></span>
         <span className={menuOpen ? "bar open" : "bar"}></span>
       </div>
 
-      {/* Center + Right combined for mobile */}
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <div className="navbar-center">
           <NavLink to="/" className="nav-link">Home</NavLink>

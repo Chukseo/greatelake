@@ -1,0 +1,119 @@
+.vision-mission {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.vm-top {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.vm-top-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #121212;
+}
+
+.vm-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.vm-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vm-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #121212;
+}
+
+.vm-subtext {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.vm-mission-vision {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.vm-mission, .vm-vision {
+  flex: 1;
+}
+
+.vm-mission h3, .vm-vision h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff6e00;
+  margin-bottom: 0.5rem;
+}
+
+.vm-mission p, .vm-vision p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.vm-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.vm-right {
+  flex: 1;
+  position: relative;
+}
+
+.vm-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.vm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vm-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vm-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .vm-mission-vision {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vm-icon img {
+    margin: 1rem auto;
+  }
+
+  .vm-top-heading {
+    font-size: 1.6rem;
+  }
+}
