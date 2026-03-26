@@ -1,119 +1,202 @@
 .vision-mission {
-  width: 100%;
-  background: #f9f9f9;
-  padding: 4rem 2rem;
-}
-
-.vm-top {
-  text-align: center;
-  margin-bottom: 3rem;
+  background: #ff6f0011; /* subtle background */
+  padding: 3rem 2rem;    /* ✅ reduce vertical padding */
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;     /* ✅ limit overall width */
+  margin: 0 auto;        /* ✅ center the section */
+  border-radius: 12px;
+  height: auto;          /* ✅ let content define height */
 }
 
 .vm-top-heading {
-  font-size: 2.2rem;
+  text-align: center;
+  font-size: 1.8rem;     /* ✅ slightly smaller */
   font-weight: 700;
   color: #121212;
+  margin-bottom: 2rem;   /* ✅ tighter spacing */
+  width: 55%;            /* ✅ balanced width */
+  margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
-.vm-container {
+.vm-cards {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  max-width: 1200px;
+  gap: 2rem;
   margin: 0 auto;
-  gap: 3rem;
+  width: 100%;
+  max-width: 1000px;
+  align-items: stretch;   /* ✅ ensures both cards stretch to equal height */
 }
 
-.vm-left {
+.vm-card {
   flex: 1;
+  border-radius: 8px;
+  position: relative;
+  display: flex;          /* ✅ allows internal content alignment */
+  flex-direction: column; /* ✅ stack content vertically */
+}
+
+.vm-left-card {
+  background: #fff;
+  padding: 1.5rem;       /* ✅ reduce padding */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
 }
 
-.vm-heading {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #121212;
-}
-
-.vm-subtext {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.vm-mission-vision {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.vm-mission, .vm-vision {
+.vm-left-card,
+.vm-right-card {
   flex: 1;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;        /* ✅ prevent cards from spreading */
 }
 
-.vm-mission h3, .vm-vision h3 {
-  font-size: 1.3rem;
+.vm-small-heading {
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #ff6e00;
+  color: #121212;
   margin-bottom: 0.5rem;
 }
 
-.vm-mission p, .vm-vision p {
+.vm-text1 {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.vm-text {
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  width: 70%;
+}
+
+.vm-button-heading {
+  background: #FF6E00;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
   font-size: 1rem;
-  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  width: fit-content;
 }
 
-.vm-icon img {
-  width: 50px;
-  height: 50px;
-}
-
-.vm-right {
-  flex: 1;
-  position: relative;
-}
-
-.vm-image {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.vm-overlay {
+.vm-lightbulb {
+  width: 380px;          /* ✅ bigger size */
+  height: 250px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 7rem;         /* ✅ move it up from the bottom */
+  right: -6.5rem;          /* ✅ keep aligned to the right */
 }
 
-.vm-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
+
+.vm-right-card {
+  position: relative;
+  flex: 1;
+  border-radius: 8px;
+  background: url("/src/assets/network-overlay.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;     /* ✅ consistent card height */
+  opacity: 2.9;          /* ✅ subtle overlay effect */
+}
+
+.vm-handshake {
+  width: 90%;            /* ✅ balanced size */
+  height: 90%;           /* ✅ maintain aspect ratio */
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth transitions for all cards */
+.vm-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: subtle lift + shadow */
+.vm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Button headings (Mission/ Vision) */
+.vm-button-heading {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.vm-button-heading:hover {
+  background: #e65c00;   /* slightly darker orange */
+  transform: scale(1.05);
+}
+
+/* Handshake image */
+.vm-handshake {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.vm-handshake:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* Lightbulb watermark */
+.vm-lightbulb {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.vm-left-card:hover .vm-lightbulb {
+  opacity: 0.2;          /* brighten slightly on hover */
+  transform: scale(1.05);
+}
+
+/* Headings fade-in effect */
+.vm-top-heading {
+  transition: color 0.3s ease;
+}
+
+.vm-top-heading:hover {
+  color: #FF6E00;        /* highlight heading on hover */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .vm-container {
+  .vm-cards {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .vm-mission-vision {
-    flex-direction: column;
-    text-align: center;
+  .vm-handshake {
+    width: 100%;
   }
 
-  .vm-icon img {
-    margin: 1rem auto;
+  .vm-lightbulb {
+    width: 200px;        /* ✅ scale down on mobile */
+    right: -2rem;
   }
 
   .vm-top-heading {
-    font-size: 1.6rem;
+    width: 90%;          /* ✅ full width on mobile */
+    font-size: 1.5rem;   /* ✅ adjust font size */
+  }
+
+  .vm-small-heading1 {
+    font-size: 1rem; 
+    align-items: center;    /* ✅ adjust font size */
+    text-align: center;
+  }
+
+  .vm-text1 {
+    font-size: 0.8rem;   /* ✅ adjust font size */
+    text-align: center;
   }
 }

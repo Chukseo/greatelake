@@ -187,17 +187,17 @@ p, .subtext, .trust-top {
 
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 10px #ff6f008a,
-                0 0 20px #ff6f0081;
+    box-shadow: 0 0 10px #FF6E00,
+                0 0 20px #FF6E00;
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 20px #ff6f0069,
-                0 0 40px #ff6f003d;
+    box-shadow: 0 0 20px #FF6E00,
+                0 0 40px #FF6E00;
     transform: scale(1.05);
   }
   100% {
-    box-shadow: 0 0 10px #ff6f007a,
+    box-shadow: 0 0 10px #FF6E00,
                 0 0 20px #ff6f005e;
     transform: scale(1);
   }
