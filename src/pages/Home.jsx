@@ -3,6 +3,7 @@ import VisionMission from "../components/VisionMission";
 import WeeklyStats from "../components/WeeklyStats";
 import WhyChooseUs from "../components/WhyChooseUs";
 import HowItWorks from "../components/HowItWorks";
+import WhatWeOffer from "../components/WhatWeOffer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <WeeklyStats />
       <WhyChooseUs />
       <HowItWorks />
+      <WhatWeOffer />
     </div>
   );
 }

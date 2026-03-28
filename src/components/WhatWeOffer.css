@@ -1,0 +1,173 @@
+.what-we-offer {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin-top: 20rem;
+  background-color: #ff6f0018;
+}
+
+.wwo-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #121212;
+}
+
+/* Base card */
+.wwo-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 80%;                /* ✅ each card is 80% wide */
+  margin: 2rem auto;         /* ✅ centered with spacing */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wwo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Split layout */
+.wwo-card-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wwo-card-split .wwo-content {
+  flex: 1;
+  padding: 1.5rem;
+  text-align: left;   /* ✅ text aligned left */
+}
+
+.wwo-image-split {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.wwo-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #121212;
+}
+
+.wwo-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.wwo-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.wwo-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.wwo-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.wwo-btn.enroll {
+  background: #FF6E00;
+  color: #fff;
+}
+
+.wwo-btn.enroll:hover {
+  background: #e65c00;
+}
+
+.wwo-btn.call {
+  background: #FF6E00;
+  color: #fff;
+}
+
+.wwo-btn.call:hover {
+  background: #792e10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wwo-card-split {
+    flex-direction: column;   /* ✅ stack vertically on mobile */
+  }
+
+  .what-we-offer {
+    margin-top: 3rem;
+  }
+
+  .wwo-image-split {
+    max-height: 220px;
+    margin-top: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .wwo-card {
+    width: 95%;              /* ✅ wider on small screens */
+  }
+}
+
+
+/* Responsive: Tablet */
+@media (max-width: 1024px) {
+  .wwo-card {
+    width: 90%;              /* ✅ cards a bit wider on tablets */
+  }
+
+  .wwo-card-split {
+    flex-direction: column;  /* ✅ stack vertically if space is tight */
+  }
+
+  .what-we-offer {
+    margin-top: 83rem;
+  }
+
+  .wwo-image-split {
+    max-height: 220px;
+    margin-top: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+
+
+/* Responsive: Extra Small (phones under 480px) */
+@media (max-width: 480px) {
+  .wwo-card {
+    width: 100%;             /* ✅ full width on very small screens */
+    margin: 1rem auto;
+  }
+
+  .wwo-content {
+    padding: 1rem;           /* ✅ tighter padding for small screens */
+  }
+
+  .wwo-buttons {
+    flex-direction: column;  /* ✅ buttons stack vertically */
+    gap: 0.5rem;
+  }
+
+  .wwo-btn {
+    width: 100%;             /* ✅ buttons stretch full width */
+  }
+}
