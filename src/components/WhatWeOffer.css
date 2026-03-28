@@ -1,10 +1,9 @@
 .what-we-offer {
   max-width: 1200px;
-  margin: 3rem auto;
+  margin-top: 20rem;
   padding: 2rem;
   font-family: 'Inter', sans-serif;
   text-align: center;
-  margin-top: 20rem;
   background-color: #ff6f0018;
 }
 
@@ -112,9 +111,9 @@
     flex-direction: column;   /* ✅ stack vertically on mobile */
   }
 
-  .what-we-offer {
-    margin-top: 3rem;
-  }
+  /* .what-we-offer {
+    margin-top: -20rem;
+  } */
 
   .wwo-image-split {
     max-height: 220px;
@@ -139,7 +138,7 @@
   }
 
   .what-we-offer {
-    margin-top: 83rem;
+    margin-top: 60rem;
   }
 
   .wwo-image-split {
@@ -169,5 +168,9 @@
 
   .wwo-btn {
     width: 100%;             /* ✅ buttons stretch full width */
+  }
+
+  .what-we-offer {
+    margin-top: 56rem;
   }
 }

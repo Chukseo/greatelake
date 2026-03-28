@@ -40,13 +40,13 @@
   color: #121212;
   border-radius: 10px;
   padding: 1rem;
-  flex: 1;                   /* equal width distribution */
-  min-width: 280px;          /* ensures readability */
+  flex: 1;
+  min-width: 280px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 8rem;
-  /* border: #121212 2px solid; */
+  margin-top: 8rem;          /* ✅ remove big spacing */
 }
+
 
 .hiw-card1 {
   background: #fff;
@@ -57,7 +57,7 @@
   min-width: 280px;          /* ensures readability */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
   /* border: #121212 2px solid; */
   transform: rotate(-15deg);
 }
@@ -139,12 +139,12 @@
     background: #fff;
     color: #121212;
     border-radius: 10px;
-    padding: 1rem;
+    /* padding: 1rem; */
     flex: 1;
     min-width: 280px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 0;            /* ✅ uniform spacing */
+    margin-top: 0;
     transform: none;          /* ✅ no rotation */
   }
 
@@ -169,6 +169,7 @@
   margin: 5rem auto 0;      /* negative margin pulls cards upward */
   position: relative;
   z-index: 2;                /* ensures cards sit above background */
+
 }
 }
 
