@@ -4,6 +4,7 @@
   left: 50%;
   transform: translateX(-50%); /* ✅ keeps it centered horizontally */
   width: 85%;                 /* ✅ reduce overall width */
+  height: 3rem;
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -32,13 +33,14 @@
 }
 
 .navbar-logo {
-  height: 32px;               /* ✅ smaller logo */
+  width: 200px;       /* ✅ enlarge horizontally */
+  height: auto;       /* ✅ keep aspect ratio */
+  max-height: 200px;   /* ✅ cap vertical size so navbar height doesn’t grow */
+  object-fit: contain; /* ✅ ensures clean scaling */
 }
 
 .navbar-brand {
-  font-size: 1rem;            /* ✅ reduced brand text size */
-  font-weight: 700;
-  color: #333;
+ display: none;
 }
 
 .navbar-center {
@@ -216,5 +218,12 @@
     flex-direction: column;
     gap: 1rem;
   }
+
+  .navbar-logo {
+  width: 150px;       /* ✅ enlarge horizontally */
+  height: auto;       /* ✅ keep aspect ratio */
+  max-height: 200px;   /* ✅ cap vertical size so navbar height doesn’t grow */
+  object-fit: contain; /* ✅ ensures clean scaling */
+}
 }
 
