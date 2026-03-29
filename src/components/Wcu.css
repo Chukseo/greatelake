@@ -13,7 +13,7 @@
 .wcu-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0A3383;
+  color: #101622;
 }
 
 .wcu-header p {
@@ -40,7 +40,7 @@
 .wcu-left h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #FF6E00;
+  color: #1f1a16;
   margin-bottom: 1rem;
 }
 
@@ -77,18 +77,49 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 1.5rem;
   text-align: left;
+  transition: all 0.3s ease, transform 0.3s ease; /* smooth transitions */
 }
 
 .feature-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #FF6E00;
   margin-bottom: 0.8rem;
+
+  /* Circle background */
+  background: #fce5d6;        /* light orange background */
+  border-radius: 50%;         /* makes it circular */
+  padding: 0.8rem;            /* space inside circle */
+  display: inline-flex;       /* keeps icon centered */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease; /* smooth icon transition */
+}
+
+/* Hover effect */
+.wcu-feature:hover {
+  background: #FF6E00;        /* card background turns orange */
+  
+}
+
+.wcu-feature:hover p {
+  transform: translateY(-6px) scale(1.05); /* lift + slight grow */
+  color: #fff;                /* paragraph text turns white */
+}
+
+.wcu-feature:hover h4 {
+  color: #fff;                /* heading text also turns white */
+}
+
+.wcu-feature:hover .feature-icon {
+  background: #fff;
+  color: #FF6E00;
+  transform: rotate(10deg); /* playful tilt animation */
 }
 
 .wcu-feature h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #0A3383;
+  color: #0b1324;
   margin-bottom: 0.5rem;
 }
 
