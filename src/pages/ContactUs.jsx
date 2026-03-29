@@ -1,3 +1,13 @@
-export default function Home() {
-  return <h1>Welcome to the Contact Page</h1>;
+import ContactHero from "../components/ContactHero";
+import Banner from "../components/BannerA";
+import Footer from "../components/Footer";
+
+export default function ContactUs() {
+  return (
+    <div>
+      <ContactHero />
+      <Banner />
+      <Footer />
+    </div>
+  );
 }
