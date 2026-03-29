@@ -1,3 +1,11 @@
-export default function Home() {
-  return <h1>Welcome to the About Page</h1>;
+import AboutHero from "../components/AboutHero";
+import Mission from "../components/Mission";
+
+export default function AboutUs() {
+  return (
+    <div>
+      <AboutHero />
+      <Mission />
+    </div>
+  );
 }

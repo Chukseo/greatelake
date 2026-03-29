@@ -21,7 +21,7 @@ export default function VisionMission() {
           <h2 className="vm-small-heading1">
             We Change Lives Through Career-Focused Training
           </h2>
-          <p className="vm-text1">
+          <p className="">
             With over 25 years of experience, Great Lake CDL Academy helps
             everyday people gain the skills, support, and job opportunities
             needed to build stable and rewarding careers.
