@@ -134,6 +134,15 @@
     transform: none;          /* ✅ remove rotation */
   }
 
+  .hiw-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  }
+
   /* Remove custom spacing on card1 */
   .hiw-card1 {
     background: #fff;

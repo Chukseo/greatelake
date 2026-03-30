@@ -209,6 +209,10 @@
     display: flex; /* show when hamburger clicked */
   }
 
+  .navbar {
+    width: 70%
+  }
+
   .navbar-center {
     flex-direction: column;
     gap: 1rem;
