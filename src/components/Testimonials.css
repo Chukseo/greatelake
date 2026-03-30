@@ -26,7 +26,7 @@
 .slider-track {
   display: flex;
   gap: 2rem;
-  animation: scroll 40s linear infinite; /* ✅ auto sliding */
+  animation: scroll 40s linear infinite;
 }
 
 .testimonial-card {

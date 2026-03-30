@@ -2,10 +2,10 @@
   background: #ff6f0011; /* subtle background */
   padding: 3rem 2rem;    /* ✅ reduce vertical padding */
   font-family: 'Inter', sans-serif;
-  max-width: 1200px;     /* ✅ limit overall width */
+  max-width: 1400px;     /* ✅ limit overall width */
   margin: 0 auto;        /* ✅ center the section */
   border-radius: 12px;
-  height: auto;          /* ✅ let content define height */
+  height: auto;    
 }
 
 .vm-top-heading {
@@ -24,8 +24,7 @@
   justify-content: space-between;
   gap: 2rem;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   align-items: stretch;   /* ✅ ensures both cards stretch to equal height */
 }
 

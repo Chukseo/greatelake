@@ -1,7 +1,7 @@
 .hero {
-  position: relative;          /* ✅ allow absolute children */
+  position: relative;         
   display: flex;
-  flex-direction: column;      /* ✅ stack content vertically */
+  flex-direction: column;     
   min-height: 100vh;
   background: #f9f9f9;
 }
@@ -69,11 +69,11 @@ p, .subtext, .trust-top {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #00ff40;              /* ✅ match Apply button color */
+  background: #00ff40;          
   margin-right: 0.5rem;
   box-shadow: 0 0 10px #00ff40, 
               0 0 20px #00ff40;
-  animation: pulseGlowDot 1s infinite; /* ✅ glowing pulse animation */
+  animation: pulseGlowDot 1s infinite; 
   
 }
 
@@ -87,7 +87,7 @@ p, .subtext, .trust-top {
   50% {
     box-shadow: 0 0 15px #00ff40,
                 0 0 30px #00ff40;
-    transform: scale(1.2);          /* ✅ subtle pop */
+    transform: scale(1.2);         
   }
   100% {
     box-shadow: 0 0 8px #00ff40,
@@ -142,8 +142,8 @@ p, .subtext, .trust-top {
   font-weight: bold;
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
-  text-decoration: none;   /* ✅ removes underline */
-  display: inline-block;   /* ✅ ensures proper button look */
+  text-decoration: none;   
+  display: inline-block;   
 }
 
 .btn-call:hover {
@@ -151,7 +151,7 @@ p, .subtext, .trust-top {
   color: white;
   transform: scale(1.05);
   box-shadow: 0 4px 12px #ff6e00;
-  text-decoration: none;   /* ✅ keeps underline off on hover */
+  text-decoration: none;   
 }
 
 
