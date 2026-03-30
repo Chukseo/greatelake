@@ -1,11 +1,11 @@
 .what-we-offer {
-  /* max-width: 1200px; */
-  margin-top: 20rem;
+  width: 100%;                
+  margin: 20rem 0 0 0;             
   padding: 2rem;
   font-family: 'Inter', sans-serif;
   text-align: center;
   background-color: #ff6f0018;
-  width: 100%;
+  box-sizing: border-box;           
 }
 
 .wwo-heading {
