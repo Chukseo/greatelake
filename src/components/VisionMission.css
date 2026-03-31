@@ -89,11 +89,11 @@
 }
 
 .vm-lightbulb {
-  width: 380px;      
+  width: 320px;      
   height: 250px;
   position: absolute;
-  bottom: 7rem;       
-  right: -6.5rem;        
+  bottom: 1rem;       
+  right: -.7rem;        
 }
 
 

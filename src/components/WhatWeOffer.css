@@ -2,6 +2,7 @@
   width: 100%;                
   margin: 20rem 0 0 0;             
   padding: 2rem;
+  
   font-family: 'Inter', sans-serif;
   text-align: center;
   background: linear-gradient(
@@ -17,7 +18,6 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #121212;
 }
 
 /* Base card */
@@ -25,9 +25,10 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  width: 80%;                /* ✅ each card is 80% wide */
-  margin: 2rem auto;         /* ✅ centered with spacing */
+  width: 70%;
+  margin: 2rem auto;
   overflow: hidden;
+  height: 450px;                  /* ⬅️ increased fixed height */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -55,7 +56,14 @@
   height: 100%;
   max-height: 250px;
   object-fit: cover;
+
+  /* ✅ White border around images */
+  border: 24px solid #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border-radius: 24px;
 }
+
 
 .wwo-content h3 {
   font-size: 1.3rem;
