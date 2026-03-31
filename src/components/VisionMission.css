@@ -1,20 +1,20 @@
 .vision-mission {
-  background: #ff6f0011; /* subtle background */
-  padding: 3rem 2rem;    /* ✅ reduce vertical padding */
+  background: #ff6f0011; 
+  padding: 3rem 2rem;    
   font-family: 'Inter', sans-serif;
-  max-width: 1400px;     /* ✅ limit overall width */
-  margin: 0 auto;        /* ✅ center the section */
+  max-width: 1400px;    
+  margin: 0 auto;      
   border-radius: 12px;
   height: auto;    
 }
 
 .vm-top-heading {
   text-align: center;
-  font-size: 1.8rem;     /* ✅ slightly smaller */
+  font-size: 1.8rem;     
   font-weight: 700;
   color: #121212;
-  margin-bottom: 2rem;   /* ✅ tighter spacing */
-  width: 55%;            /* ✅ balanced width */
+  margin-bottom: 2rem;   
+  width: 55%;          
   margin: 0 auto;
   padding-bottom: 5rem;
 }
@@ -25,20 +25,20 @@
   gap: 2rem;
   margin: 0 auto;
   max-width: 1200px;
-  align-items: stretch;   /* ✅ ensures both cards stretch to equal height */
+  align-items: stretch;   
 }
 
 .vm-card {
   flex: 1;
   border-radius: 8px;
   position: relative;
-  display: flex;          /* ✅ allows internal content alignment */
-  flex-direction: column; /* ✅ stack content vertically */
+  display: flex;         
+  flex-direction: column;
 }
 
 .vm-left-card {
   background: #fff;
-  padding: 1.5rem;       /* ✅ reduce padding */
+  padding: 1.5rem;      
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -52,7 +52,7 @@
   flex: 1;
   border-radius: 8px;
   position: relative;
-  margin: 0 auto;        /* ✅ prevent cards from spreading */
+  margin: 0 auto;       
 }
 
 .vm-small-heading {
@@ -77,7 +77,7 @@
 }
 
 .vm-button-heading {
-  background: #FF6E00;
+  background: #223899;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -89,11 +89,11 @@
 }
 
 .vm-lightbulb {
-  width: 380px;          /* ✅ bigger size */
+  width: 380px;      
   height: 250px;
   position: absolute;
-  bottom: 7rem;         /* ✅ move it up from the bottom */
-  right: -6.5rem;          /* ✅ keep aligned to the right */
+  bottom: 7rem;       
+  right: -6.5rem;        
 }
 
 
@@ -105,13 +105,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 300px;     /* ✅ consistent card height */
-  opacity: 2.9;          /* ✅ subtle overlay effect */
+  min-height: 300px;     
+  opacity: 2.9;        
 }
 
 .vm-handshake {
-  width: 90%;            /* ✅ balanced size */
-  height: 90%;           /* ✅ maintain aspect ratio */
+  width: 90%;           
+  height: 90%;           
   border-radius: 8px;
   position: relative;
   z-index: 1;
@@ -134,7 +134,7 @@
 }
 
 .vm-button-heading:hover {
-  background: #e65c00;   /* slightly darker orange */
+  background: #2947a8;   
   transform: scale(1.05);
 }
 
@@ -154,17 +154,16 @@
 }
 
 .vm-left-card:hover .vm-lightbulb {
-  opacity: 0.2;          /* brighten slightly on hover */
+  opacity: 0.2;          
   transform: scale(1.05);
 }
 
-/* Headings fade-in effect */
 .vm-top-heading {
   transition: color 0.3s ease;
 }
 
 .vm-top-heading:hover {
-  color: #FF6E00;        /* highlight heading on hover */
+  color: #FF6E00;        
 }
 
 /* Responsive */
@@ -179,23 +178,23 @@
   }
 
   .vm-lightbulb {
-    width: 200px;        /* ✅ scale down on mobile */
+    width: 200px;       
     right: -2rem;
   }
 
   .vm-top-heading {
-    width: 90%;          /* ✅ full width on mobile */
-    font-size: 1.5rem;   /* ✅ adjust font size */
+    width: 90%;         
+    font-size: 1.5rem;
   }
 
   .vm-small-heading1 {
     font-size: 1rem; 
-    align-items: center;    /* ✅ adjust font size */
+    align-items: center;   
     text-align: center;
   }
 
   .vm-text1 {
-    font-size: 0.8rem;   /* ✅ adjust font size */
+    font-size: 0.8rem;   
     text-align: center;
   }
 }

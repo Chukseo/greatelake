@@ -12,7 +12,7 @@ export default function Hero() {
         <span className="glow-dot"></span> Trusted by 20,000+ Happy Earners
       </p>
 
-      <h1>Start a High-Paying Trucking Career in Michigan</h1>
+      <h1>Struggling with money? Your high-paying CDL path starts here.”</h1>
       <p className="subtext">
         This is your pathway to stable, real income and a better future.
       </p>

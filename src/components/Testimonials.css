@@ -1,12 +1,20 @@
 .testimonials {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 2rem;
+  width: 100%;                        
+  margin: 0;                         
+  padding: 4rem 4rem;                  
   font-family: 'Inter', sans-serif;
   text-align: center;
-  background: #f9f9f9;
-  border-radius: 12px;
+
+  border-radius: 0;                    
+  background: linear-gradient(
+    135deg, 
+    #e65c0011, 
+    #e65c001c 0.5%, 
+    #f9d52309
+  );
+  box-sizing: border-box;             
 }
+
 
 .testimonials-heading {
   font-size: 2rem;

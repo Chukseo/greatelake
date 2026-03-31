@@ -1,9 +1,16 @@
 .why-choose-us {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 2rem;
+  width: 100%;                        
+  margin: 0;                           
+  padding: 5rem 4rem;                   
   font-family: 'Inter', sans-serif;
   text-align: center;
+  background: linear-gradient(
+    135deg, 
+    #e65c0011, 
+    #e65c001c 0.5%, 
+    #f9d52309
+  );
+  box-sizing: border-box;              
 }
 
 .wcu-heading {

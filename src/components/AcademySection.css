@@ -5,7 +5,12 @@
   margin: 4rem auto;
   padding: 2rem;
   font-family: 'Inter', sans-serif;
-  background-color: rgba(128, 128, 128, 0.048);
+  /* background: linear-gradient(
+    135deg, 
+    #e65c0011, 
+    #e65c001c 0.5%, 
+    #f9d52309
+  ); */
 }
 
 .academy-card {
