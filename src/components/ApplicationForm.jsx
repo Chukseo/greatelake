@@ -246,11 +246,7 @@ export default function ApplicationForm() {
                 <input type="checkbox" /> I hereby certify that I accept the conditions of this waiver, MTDS will not be held responsible.
               </label>
             </div>
-            <input type="text" placeholder="Enter Full Name" />
-            <div className="form-content">
-              <input type="text" placeholder="Signed By" />
-              <input type="text" placeholder="Authorized Staff Signature" />
-            </div>
+            
           </div>
         )}
       </div>
