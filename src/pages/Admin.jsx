@@ -1,3 +1,11 @@
-export default function Home() {
-  return <h1>Welcome to the Admin Page</h1>;
+import Dashboard from "../components/Dashboard";
+import Application from "../components/Appplication";
+
+export default function Admin() {
+  return (
+    <div>
+      <Dashboard />
+      <Application />
+    </div>
+  );
 }

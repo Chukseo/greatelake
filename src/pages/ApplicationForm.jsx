@@ -1,3 +1,9 @@
-export default function Home() {
-  return <h1>Welcome to the App Page</h1>;
+import ApplicationForm from "../components/ApplicationForm";
+
+export default function Application() {
+  return (
+    <div>
+      <ApplicationForm />
+    </div>
+  );
 }
