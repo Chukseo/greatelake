@@ -177,5 +177,6 @@
 
   .wcu-right {
     grid-template-columns: 1fr;
+    width: 90%;
   }
 }
