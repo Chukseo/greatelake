@@ -1,4 +1,3 @@
-// src/components/WhyChooseUs.jsx
 import React from "react";
 import "./WhyChooseUs.css";
 

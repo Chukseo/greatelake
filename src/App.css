@@ -1,9 +1,22 @@
+* {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  ); 
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
   color: var(--accent);
-  background: var(--accent-bg);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  ); 
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;

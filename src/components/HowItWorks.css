@@ -1,6 +1,6 @@
 .how-it-works {
   background: url("/src/assets/trucks-bg.jpg") center/cover no-repeat;
-  padding: 4rem 2rem 6rem;   /* extra bottom padding for overlap */
+  padding: 4rem 2rem 6rem;   
   font-family: 'Inter', sans-serif;
   color: #fff;
   position: relative;

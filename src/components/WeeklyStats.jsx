@@ -1,10 +1,9 @@
-// src/components/WeeklyStats.jsx
 import React from "react";
 import "./WeeklyStats.css";
 
 // Import images
-import earningsImg from "../assets/w1.png";   // replace with your actual image
-import trucksImg from "../assets/w2.jpg";       // replace with your actual image
+import earningsImg from "../assets/w1.png";   
+import trucksImg from "../assets/w2.jpg";       
 
 export default function WeeklyStats() {
   return (

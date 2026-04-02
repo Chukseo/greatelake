@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  background: #0A3383;       /* ✅ deep blue background */
+  background: #0A3383;     
   color: #fff;
   padding: 3rem 2rem;
   border-radius: 12px;
@@ -12,7 +12,7 @@
 .stats-item h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f7f6f5;            /* ✅ orange highlight for numbers */
+  color: #f7f6f5;            
   margin-bottom: 0.5rem;
   font-family: 'inter', sans-serif;
 }
@@ -20,7 +20,7 @@
 .stats-item p {
     font-size: 1rem;
     font-weight: 500;
-    color: #FF6E00;               /* ✅ white text for labels */
+    color: #FF6E00;            
     font-family: 'inter', sans-serif;
 }
 

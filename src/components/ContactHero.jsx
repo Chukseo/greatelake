@@ -1,4 +1,3 @@
-// src/components/ContactHero.jsx
 import React from "react";
 import "./ContactHero.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPlus } from "react-icons/fa";

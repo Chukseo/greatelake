@@ -1,4 +1,3 @@
-// src/components/Stats.jsx
 import React from "react";
 import "./Stats.css";
 

@@ -1,4 +1,3 @@
-// src/components/AdminLogin.jsx
 import React from "react";
 import "./AdminLogin.css";
 

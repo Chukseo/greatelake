@@ -1,4 +1,3 @@
-// src/components/MissionTwoCards.jsx
 import React from "react";
 import "./Mission.css";
 

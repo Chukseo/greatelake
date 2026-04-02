@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import React from "react";
 import "./Hero.css";
 import truckDriverImg from "../assets/heroimg2.png";

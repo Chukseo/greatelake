@@ -37,8 +37,15 @@ const INITIAL_VISITORS = [
   { id: 10, name: "Mary Kelly", origin: "Referral", email: "mary@example.com", phone: "+2348023456789", stages: ["Leads", "Applied", "Approved"], date: "Nov 11 2025" }
 ];
 
+const INITIAL_MESSAGES = [
+  { id: 1, name: "Jane Dominuc", email: "jane@example.com", subject: "Enrollment Inquiry", message: "I’d like more details about Class B enrollment.", date: "Nov 12 2025" },
+  { id: 2, name: "John Tray", email: "john@example.com", subject: "Payment Options", message: "Do you offer installment payments?", date: "Nov 13 2025" },
+  { id: 3, name: "Mary Johnson", email: "mary@example.com", subject: "Schedule", message: "What’s the next available training schedule?", date: "Nov 14 2025" }
+];
+
 const Dashboard = () => {
   const [visitors] = useState(INITIAL_VISITORS);
+  const [messages] = useState(INITIAL_MESSAGES);
   const [selectedStage, setSelectedStage] = useState("Leads");
 
   const stages = [
@@ -104,7 +111,7 @@ const Dashboard = () => {
 
       {/* Visitor details */}
       <section className="card">
-        <h2>{selectedStage} </h2>
+        <h2>{selectedStage}</h2>
         <div className="table-wrapper">
           <table className="styled-table">
             <thead>
@@ -131,6 +138,40 @@ const Dashboard = () => {
               {filteredVisitors.length === 0 && (
                 <tr>
                   <td colSpan="6" style={{ textAlign: "center" }}>No visitors in this stage</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Contact Messages */}
+      <section className="card">
+        <h2>Contact Messages</h2>
+        <div className="table-wrapper">
+          <table className="styled-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {messages.map(m => (
+                <tr key={m.id}>
+                  <td>{m.name}</td>
+                  <td>{m.email}</td>
+                  <td>{m.subject}</td>
+                  <td>{m.message}</td>
+                  <td>{m.date}</td>
+                </tr>
+              ))}
+              {messages.length === 0 && (
+                <tr>
+                  <td colSpan="5" style={{ textAlign: "center" }}>No messages received</td>
                 </tr>
               )}
             </tbody>

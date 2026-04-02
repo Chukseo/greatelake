@@ -1,4 +1,3 @@
-// src/components/VisionMission.jsx
 import React from "react";
 import "./VisionMission.css";
 

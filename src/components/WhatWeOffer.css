@@ -33,7 +33,7 @@
   width: 70%;
   margin: 2rem auto;
   overflow: hidden;
-  height: 450px;                  /* ⬅️ increased fixed height */
+  height: 450px;                  
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -52,7 +52,7 @@
 .wwo-card-split .wwo-content {
   flex: 1;
   padding: 1.5rem;
-  text-align: left;   /* ✅ text aligned left */
+  text-align: left; 
 }
 
 .wwo-image-split {
@@ -62,7 +62,6 @@
   max-height: 250px;
   object-fit: cover;
 
-  /* ✅ White border around images */
   border: 24px solid #fff;
   border-radius: 12px;
   box-sizing: border-box;
@@ -128,7 +127,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .wwo-card-split {
-    flex-direction: column;   /* ✅ stack vertically on mobile */
+    flex-direction: column;   
   }
 
   /* .what-we-offer {
@@ -142,7 +141,7 @@
   }
 
   .wwo-card {
-    width: 95%;              /* ✅ wider on small screens */
+    width: 95%;            
   }
 }
 
@@ -150,11 +149,11 @@
 /* Responsive: Tablet */
 @media (max-width: 1024px) {
   .wwo-card {
-    width: 90%;              /* ✅ cards a bit wider on tablets */
+    width: 90%;            
   }
 
   .wwo-card-split {
-    flex-direction: column;  /* ✅ stack vertically if space is tight */
+    flex-direction: column;  
   }
 
   .what-we-offer {
@@ -173,21 +172,21 @@
 /* Responsive: Extra Small (phones under 480px) */
 @media (max-width: 480px) {
   .wwo-card {
-    width: 100%;             /* ✅ full width on very small screens */
+    width: 100%;             
     margin: 1rem auto;
   }
 
   .wwo-content {
-    padding: 1rem;           /* ✅ tighter padding for small screens */
+    padding: 1rem;           
   }
 
   .wwo-buttons {
-    flex-direction: column;  /* ✅ buttons stack vertically */
+    flex-direction: column;  
     gap: 0.5rem;
   }
 
   .wwo-btn {
-    width: 100%;             /* ✅ buttons stretch full width */
+    width: 100%;          
   }
 
   .what-we-offer {

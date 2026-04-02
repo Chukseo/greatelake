@@ -1,12 +1,12 @@
 .banner {
   width: 100%; 
-  margin: 0;                        /* no auto margins, full width */
+  margin: 0;                        
   background: linear-gradient(135deg, #ffe0cc, #ffffff); 
   padding: 6rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;           /* ensures padding stays inside width */
+  box-sizing: border-box;         
 }
 
 .banner-content {

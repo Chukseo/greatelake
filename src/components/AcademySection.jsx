@@ -1,4 +1,3 @@
-// src/components/AcademySection.jsx
 import React from "react";
 import "./AcademySection.css";
 

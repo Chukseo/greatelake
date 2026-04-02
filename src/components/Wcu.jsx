@@ -1,4 +1,3 @@
-// src/components/Wcu.jsx
 import React from "react";
 import "./Wcu.css";
 

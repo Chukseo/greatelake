@@ -69,7 +69,6 @@ p, .subtext, .trust-top {
   margin: 1rem 0;
 }
 
-/* Trust bullet glowing like Apply button */
 .glow-dot {
   width: 10px;
   height: 10px;
@@ -215,7 +214,7 @@ p, .subtext, .trust-top {
   width: 100%;
   text-align: center;
   padding: -6rem 0;
-  position: absolute;          /* ✅ anchor to bottom of hero */
+  position: absolute;       
   bottom: 0;
   left: 0;
 }

@@ -1,4 +1,3 @@
-// src/components/Banner.jsx
 import React from "react";
 import "./BannerA.css";
 import { Link } from "react-router-dom";

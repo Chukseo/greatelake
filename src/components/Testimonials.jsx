@@ -1,4 +1,3 @@
-// src/components/Testimonials.jsx
 import React from "react";
 import "./Testimonials.css";
 

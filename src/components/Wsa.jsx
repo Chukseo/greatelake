@@ -1,4 +1,3 @@
-// src/components/Wsa.jsx
 import React from "react";
 import "./Wsa.css";
 
