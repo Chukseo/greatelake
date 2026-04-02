@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import jsPDF from "jspdf";
 import "./Dashboard.css";
 
 const ApplicationDashboard = () => {
@@ -8,7 +9,8 @@ const ApplicationDashboard = () => {
       name: "Jane Doe",
       preferredClass: "B",
       emergencyContact: "+2348012345678",
-      details: "Jane is applying for advanced Truck Driving. She has prior experience in basic truck operation.",
+      details:
+        "Jane is applying for advanced Truck Driving. She has prior experience in basic truck operation.",
       approved: false
     },
     {
@@ -16,7 +18,8 @@ const ApplicationDashboard = () => {
       name: "John Smith",
       preferredClass: "A",
       emergencyContact: "+2348098765432",
-      details: "John is interested in basic truck driving. He has a strong background in Truck Driving.",
+      details:
+        "John is interested in basic truck driving. He has a strong background in Truck Driving.",
       approved: false
     },
     {
@@ -24,7 +27,8 @@ const ApplicationDashboard = () => {
       name: "Karl Smith",
       preferredClass: "A",
       emergencyContact: "+2348098765432",
-      details: "John is interested in basic truck driving. He has a strong background in Truck Driving.",
+      details:
+        "Karl is interested in basic truck driving. He has a strong background in Truck Driving.",
       approved: false
     },
     {
@@ -32,7 +36,8 @@ const ApplicationDashboard = () => {
       name: "Gabriel Smith",
       preferredClass: "A",
       emergencyContact: "+2348098765432",
-      details: "John is interested in basic truck driving. He has a strong background in Truck Driving.",
+      details:
+        "Gabriel is interested in basic truck driving. He has a strong background in Truck Driving.",
       approved: false
     },
     {
@@ -40,7 +45,8 @@ const ApplicationDashboard = () => {
       name: "Mark Smith",
       preferredClass: "A",
       emergencyContact: "+2348098765432",
-      details: "John is interested in basic truck driving. He has a strong background in Truck Driving.",
+      details:
+        "Mark is interested in basic truck driving. He has a strong background in Truck Driving.",
       approved: false
     },
     {
@@ -48,7 +54,8 @@ const ApplicationDashboard = () => {
       name: "Drake Smith",
       preferredClass: "A",
       emergencyContact: "+2348098765432",
-      details: "John is interested in basic truck driving. He has a strong background in Truck Driving.",
+      details:
+        "Drake is interested in basic truck driving. He has a strong background in Truck Driving.",
       approved: false
     }
   ]);
@@ -56,11 +63,31 @@ const ApplicationDashboard = () => {
   const [selectedApp, setSelectedApp] = useState(null);
 
   const handleApprove = (id) => {
-    setApplications(applications.map(app =>
-      app.id === id ? { ...app, approved: true } : app
-    ));
+    setApplications(
+      applications.map((app) =>
+        app.id === id ? { ...app, approved: true } : app
+      )
+    );
     alert("Application approved!");
     setSelectedApp(null);
+  };
+
+  const handleDownloadPDF = (applicant) => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(18);
+    doc.text("Applicant Information", 20, 20);
+
+    doc.setFontSize(12);
+    doc.text(`Name: ${applicant.name}`, 20, 40);
+    doc.text(`Preferred Class: ${applicant.preferredClass}`, 20, 50);
+    doc.text(`Emergency Contact: ${applicant.emergencyContact}`, 20, 60);
+    doc.text(`Status: ${applicant.approved ? "Approved" : "Pending"}`, 20, 70);
+
+    doc.text("Details:", 20, 90);
+    doc.text(applicant.details, 20, 100, { maxWidth: 170 });
+
+    doc.save(`${applicant.name}-application.pdf`);
   };
 
   return (
@@ -79,7 +106,7 @@ const ApplicationDashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {applications.map(app => (
+              {applications.map((app) => (
                 <tr key={app.id}>
                   <td>{app.name}</td>
                   <td>{app.preferredClass}</td>
@@ -110,13 +137,28 @@ const ApplicationDashboard = () => {
       {/* Modal for applicant details */}
       {selectedApp && (
         <div className="modal-overlay" onClick={() => setSelectedApp(null)}>
-          <div className="modal" onClick={e => e.stopPropagation()}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h3>Applicant Details</h3>
-            <p><strong>Name:</strong> {selectedApp.name}</p>
-            <p><strong>Preferred Class:</strong> {selectedApp.preferredClass}</p>
-            <p><strong>Emergency Contact:</strong> {selectedApp.emergencyContact}</p>
-            <p><strong>Details:</strong> {selectedApp.details}</p>
-            <div style={{ display: "flex", gap: "1rem", marginTop: "1rem", flexWrap: "wrap" }}>
+            <p>
+              <strong>Name:</strong> {selectedApp.name}
+            </p>
+            <p>
+              <strong>Preferred Class:</strong> {selectedApp.preferredClass}
+            </p>
+            <p>
+              <strong>Emergency Contact:</strong> {selectedApp.emergencyContact}
+            </p>
+            <p>
+              <strong>Details:</strong> {selectedApp.details}
+            </p>
+            <div
+              style={{
+                display: "flex",
+                gap: "1rem",
+                marginTop: "1rem",
+                flexWrap: "wrap"
+              }}
+            >
               <button
                 className="contact-btn"
                 onClick={() => handleApprove(selectedApp.id)}
@@ -125,9 +167,9 @@ const ApplicationDashboard = () => {
               </button>
               <button
                 className="contact-btn"
-                onClick={() => handleApprove(selectedApp.id)}
+                onClick={() => handleDownloadPDF(selectedApp)}
               >
-                Donload PDF
+                Download PDF
               </button>
               <button
                 className="contact-btn close-btn"
