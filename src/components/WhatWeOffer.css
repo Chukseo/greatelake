@@ -22,7 +22,12 @@
 
 /* Base card */
 .wwo-card {
-  background: #fff;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  );
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   width: 70%;
@@ -104,6 +109,7 @@
 .wwo-btn.enroll {
   background: #FF6E00;
   color: #fff;
+  text-decoration: none;
 }
 
 .wwo-btn.enroll:hover {

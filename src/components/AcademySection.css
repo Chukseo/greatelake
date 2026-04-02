@@ -2,20 +2,25 @@
   display: flex;
   gap: 2rem;
   max-width: 1200px;
-  margin: 4rem auto;
+  margin: 0 auto;
   padding: 2rem;
   font-family: 'Inter', sans-serif;
-  /* background: linear-gradient(
-    135deg, 
-    #e65c0011, 
-    #e65c001c 0.5%, 
-    #f9d52309
-  ); */
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e678341a 100%,       
+    #f0f4ff44 40%     
+  ); 
 }
 
 .academy-card {
   flex: 1;
-  background: #fff;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  );
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 2rem;
@@ -46,6 +51,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 .academy-btn:hover {

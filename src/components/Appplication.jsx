@@ -124,6 +124,12 @@ const ApplicationDashboard = () => {
                 Approve Application
               </button>
               <button
+                className="contact-btn"
+                onClick={() => handleApprove(selectedApp.id)}
+              >
+                Donload PDF
+              </button>
+              <button
                 className="contact-btn close-btn"
                 onClick={() => setSelectedApp(null)}
               >

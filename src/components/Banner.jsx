@@ -1,6 +1,7 @@
 // src/components/Banner.jsx
 import React from "react";
 import "./Banner.css";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   return (
@@ -10,7 +11,9 @@ export default function Banner() {
         <p>
           Start your journey toward financial stability with simple, guided training.
         </p>
-        <button className="banner-btn">Enroll Now</button>
+        <Link to="/Application-Form" className="banner-btn">
+          Enroll Now
+        </Link>
       </div>
     </section>
   );

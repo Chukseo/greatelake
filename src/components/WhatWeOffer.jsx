@@ -1,6 +1,7 @@
 // src/components/WhatWeOffer.jsx
 import React from "react";
 import "./WhatWeOffer.css";
+import { Link } from "react-router-dom";
 
 // Import images
 import trainingImg from "../assets/training-program.png";
@@ -11,7 +12,7 @@ export default function WhatWeOffer() {
     <section className="what-we-offer">
       <h2 className="wwo-heading">What We Offer</h2>
 
-      {/* CDL Skills Training Program */}
+    
       <div className="wwo-card wwo-card-split">
         <div className="wwo-content">
           <h3>CDL Skills Training Program</h3>
@@ -46,7 +47,9 @@ export default function WhatWeOffer() {
             financial growth.
           </p>
           <div className="wwo-buttons">
-            <button className="wwo-btn enroll">Enroll Now</button>
+            <Link to="/Application-Form" className="wwo-btn enroll">
+              Enroll Now
+            </Link>
             <button className="wwo-btn call">Call Now</button>
           </div>
         </div>

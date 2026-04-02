@@ -6,6 +6,7 @@ import "./AcademySection.css";
 import img1 from "../assets/community.png";
 import img2 from "../assets/guidance.png";
 import img3 from "../assets/future.png";
+import { Link } from "react-router-dom";
 
 export default function AcademySection() {
   return (
@@ -16,7 +17,9 @@ export default function AcademySection() {
           Join a diverse community focused on growth, confidence, and financial
           progress.
         </p>
-        <button className="academy-btn">Contact Us Now</button>
+        <Link to="/Contact" className="academy-btn">
+          Contact Us Now
+        </Link>
 
         <div className="academy-subcards">
           <div className="subcard">

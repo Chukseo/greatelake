@@ -1,5 +1,10 @@
 .vision-mission {
-  background: #ff6f0011; 
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  ); 
   padding: 3rem 2rem;    
   font-family: 'Inter', sans-serif;
   max-width: 1400px;    
@@ -37,7 +42,12 @@
 }
 
 .vm-left-card {
-  background: #fff;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  );
   padding: 1.5rem;      
   display: flex;
   flex-direction: column;
@@ -92,7 +102,7 @@
   width: 320px;      
   height: 250px;
   position: absolute;
-  bottom: 1rem;       
+  bottom: 4rem;       
   right: -.7rem;        
 }
 

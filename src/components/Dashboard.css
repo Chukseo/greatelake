@@ -4,6 +4,12 @@
   padding: 1rem;
   box-sizing: border-box;
   margin: 7rem 0;
+   background: linear-gradient(
+    135deg,
+    #ffffff 0%,        
+    #e6783411 100%,       
+    #f0f4ff44 40%     
+  ); 
 }
 
 /* Pipeline header */

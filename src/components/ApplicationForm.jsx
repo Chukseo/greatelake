@@ -15,16 +15,24 @@ export default function ApplicationForm() {
   return (
     <div className="application-form">
       {/* Progress Bar */}
-      <div className="progress-bar">
-        {[1, 2, 3, 4].map((s) => (
-          <div
-            key={s}
-            className={`progress-step ${step >= s ? "active" : ""}`}
-          >
-            {s}
-          </div>
-        ))}
+<div className="progress-bar">
+  {[
+    { num: 1, title: "Personal Details" },
+    { num: 2, title: "Driving History" },
+    { num: 3, title: "Employment History" },
+    { num: 4, title: "Certification" }
+  ].map((stepItem, index, arr) => (
+    <div className="progress-step-wrapper" key={stepItem.num}>
+      <div
+        className={`progress-step ${step >= stepItem.num ? "active" : ""}`}
+      >
+        {stepItem.num}
       </div>
+      <div className="progress-title">{stepItem.title}</div>
+      {index < arr.length - 1 && <div className="progress-divider"></div>}
+    </div>
+  ))}
+</div>
 
       {/* Form Content */}
       <div>
@@ -129,6 +137,29 @@ export default function ApplicationForm() {
               <input type="text" placeholder="Location" />
               <input type="text" placeholder="Violation or Conviction" />
             </div>
+
+<h3 className="form-subtitle">Compliance Questions</h3>
+            {[
+              "Have you had any accidents in the last 3 years?",
+              "Has your permit or license been suspended within the last 3 years?",
+              "Have you had any moving violations, traffic convictions or forfeitures in the last 3 years?",
+              "Have you ever been denied a license, permit or privilege to operate a motor vehicle?",
+              "Has any license, permit or privilege ever been suspended or revoked?",
+              "Have you ever been stopped/arrested/convicted for driving under the influence of drugs or alcohol or have a current charge pending?",
+              "Have you ever been arrested/convicted for possession, sale or use of a narcotic drug, amphetamine or other derivative thereof or have a current charge pending?",
+              "Have you ever been convicted of a crime or have a current charge pending?",
+              "Have you ever been convicted of an offense involving the use of drugs or alcohol?",
+              "Have you ever tested positive on any drug test, tested at a breath alcohol concentration level of 0.02% or greater, or refused to take a required test?",
+              "Have you ever committed any other violations of DOT drug and alcohol testing regulations?"
+            ].map((q, idx) => (
+              <div className="form-row" key={idx}>
+                <label>{q}</label>
+                <label><input type="checkbox" /> Yes</label>
+                <label><input type="checkbox" /> No</label>
+              </div>
+            ))}
+
+            <textarea placeholder="If YES to any, provide details here"></textarea>
           </div>
         )}
 

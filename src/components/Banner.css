@@ -39,6 +39,8 @@
   transition: background 0.3s ease;
   transition: all 0.2s ease;
   animation: pulseGlow 1s infinite;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .banner-btn:hover {

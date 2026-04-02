@@ -13,10 +13,10 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        // ✅ Always hide once user scrolls beyond 50px
+
         setHidden(true);
       } else {
-        // ✅ Show only when back at the very top
+    
         setHidden(false);
       }
     };

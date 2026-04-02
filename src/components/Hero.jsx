@@ -2,6 +2,8 @@
 import React from "react";
 import "./Hero.css";
 import truckDriverImg from "../assets/heroimg2.png";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -18,8 +20,12 @@ export default function Hero() {
       </p>
 
       <div className="hero-buttons">
-        <button className="btn-apply">Enroll Now</button>
-        <a href="tel:+1234567890" className="btn-call">Call Now</a>
+        <Link to="/Application-Form" className="btn-apply">
+          Enroll Now
+        </Link>
+        <a href="tel:+1234567890" className="btn-call">
+          Call Now
+        </a>
       </div>
     </div>
 
@@ -28,7 +34,7 @@ export default function Hero() {
     </div>
   </div>
 
-  {/* ✅ Place trust-bottom-container here, outside hero-container */}
+  
   <div className="trust-bottom-container">
     <p className="trust-bottom">
       Trusted by 50,000+ businesses for innovative design and growth
