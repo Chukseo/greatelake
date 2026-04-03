@@ -125,17 +125,10 @@ textarea {
 
 .form-row {
   display: flex;
-  justify-content: space-between; 
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
   margin: 1rem 0;
-}
-
-.form-row input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-left: auto; 
-  accent-color: #FF6E00;
-  border-radius: 4px; 
 }
 
 .form-row label {
