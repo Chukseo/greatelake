@@ -134,6 +134,15 @@ textarea {
   resize: vertical;
 }
 
+.field-error {
+  border-color: #d93025 !important;
+  box-shadow: 0 0 0 2px rgba(217, 48, 37, 0.15);
+}
+
+.checkbox-error {
+  color: #b42318;
+}
+
 /* Form Rows */
 .form-row {
   display: flex;
@@ -200,6 +209,21 @@ textarea {
 
 .nav-btn.submit:hover {
   background: #06245c;
+}
+
+.form-message {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 /* ✅ Responsive Breakpoints */

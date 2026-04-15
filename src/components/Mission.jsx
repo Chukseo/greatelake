@@ -2,9 +2,9 @@ import React from "react";
 import "./Mission.css";
 
 // Import your images
-import classroomImg from "../assets/classroom-discussion.png";
-import cabImg from "../assets/truck-cab-training.png";
-import missionImg from "../assets/mission-banner.png";
+import classroomImg from "../assets/classroom-discussion.webp";
+import cabImg from "../assets/truck-cab-training.webp";
+import missionImg from "../assets/mission-banner.webp";
 
 export default function MissionTwoCards() {
   return (
@@ -19,7 +19,8 @@ export default function MissionTwoCards() {
         </p>
         <p>
           We’re a top CDL training academy delivering hands-on learning, expert instruction,
-          and real career results—so every student is fully prepared to succeed on the road.
+          real career results and <strong>“ELDT-Compliant Training Program (FMCSA Approved Curriculum)”.</strong> 
+           - So every student is fully prepared to succeed on the road.
         </p>
         <img src={cabImg} alt="Classroom Training" />
       </div>

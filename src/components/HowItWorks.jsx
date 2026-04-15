@@ -2,10 +2,9 @@ import React from "react";
 import "./HowItWorks.css";
 
 // Import assets
-import callImg from "../assets/call.jpg";
-import advisorImg from "../assets/advisor.png";
-import trainingImg from "../assets/training.jpg";
-// import trucksBg from "../assets/trucks-bg.jpg";
+import callImg from "../assets/call.webp";
+import advisorImg from "../assets/advisor.webp";
+import trainingImg from "../assets/training.webp";
 
 export default function HowItWorks() {
   return (

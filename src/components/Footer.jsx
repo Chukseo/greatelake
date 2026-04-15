@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 
 // Import images
-import truckImg from "../assets/footimg.png"; // replace with your truck image
+import truckImg from "../assets/footimg.webp"; 
 import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook, FaPhone } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export default function Footer() {
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/admin">Admin Page</a></li>
+              {/* <li><a href="/admin">Admin Page</a></li> */}
               {/* <li>Blog</li> */}
             </ul>
           </div>
